@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Info</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      h1 {
+        margin: 30px;
+        text-align: center;
+      }
+      form {
+        margin: 50px 100px;
+      }
+      #res {
+        margin-top: 50;
+        text-align: center;
+        color: red;
+        font-weight: 1000;
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Il mio Form:</h1>
+    <form>
+      <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Inserisci nome"
+          id="nome"
+        />
+      </div>
+      <div class="form-group">
+        <label for="eta">Eta:</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Inserisci eta"
+          id="eta"
+        />
+      </div>
+      <div class="form-group">
+        <label for="">Citta:</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Inserisci la città di nascita"
+          id="citta"
+        />
+      </div>
+      <button type="button" onclick="myFunction()" class="btn btn-primary">
+        Cliccami!
+      </button>
+    </form>
+    <p id="res"></p>
+  </body>
+  <script>
+    function myFunction() {
+      var nome = document.getElementById("nome").value;
+      var eta = document.getElementById("eta").value;
+      var citta = document.getElementById("citta").value;
+
+      var res =
+        "Ciao " + nome + "! Hai " + eta + " anni e sei nato/a a " + citta + " ";
+      document.getElementById("res").innerHTML = res;
+    }
+  </script>
+</html>
